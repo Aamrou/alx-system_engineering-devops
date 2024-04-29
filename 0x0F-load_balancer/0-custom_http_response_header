@@ -11,4 +11,3 @@ sed -i 's,# pass.*,'"$NTF"',' /etc/nginx/sites-enabled/default
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/cm_404.html
 sed -i '0,/location \/ {/s//&'"\n$HEADR"'/' /etc/nginx/sites-enabled/default
 service nginx start
-
