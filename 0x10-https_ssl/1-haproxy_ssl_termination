@@ -4,7 +4,8 @@ global
 	chroot /var/lib/haproxy
 	stats socket /run/haproxy/admin.sock mode 660 level admin
 	stats timeout 30s
-	user haproxy
+	user hap
+roxy
 	group haproxy
 	daemon
 
@@ -48,3 +49,4 @@ backend webservers
 	balance roundrobin
 	server 462927-web-01 54.84.61.95:80 check
 	server 462927-web-02 54.89.45.44:80 check
+
